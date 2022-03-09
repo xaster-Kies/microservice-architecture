@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from 'axios'
+import CommentCreate from "./CommentCreate";
 
 export default() => {
 
@@ -30,7 +31,8 @@ export default() => {
 
           <div className="card-body">
             <h3>{post.title}</h3>
-            </div>
+            <CommentCreate postId={post.id}/>
+          </div>
         </div>
 
       )
@@ -41,5 +43,5 @@ export default() => {
     <div className="d-flex flex-row flex-wrap justify-content-between">
       {renderedPosts}
     </div>
-    )
+  )
 }

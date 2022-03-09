@@ -23,7 +23,7 @@ app.post('/posts/:id/comments', (req, res) => {
 
    comments.push({ id: commentId, content })
 
-   res.status(201).send(elements)
+   res.status(201).send(comments)
 })
 
 app.listen(4001, () => {
